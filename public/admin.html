@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f93">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Admin - MemePie</title>
+  </head>
+  <body>
+    <div class="main">
+      <img class="logo" src="./img/cookie.png" alt="">
+      <form class="upload__form" action="index.html" method="get">
+        <input type="file" name="file" id="file">
+        <label for="file" class="hover">Choose a file <i class="fas fa-upload"></i> </label>
+        <span id="err_msg"></span>
+        <input class="tag__input" placeholder="Type tags..." type="text" name="tag">
+      </form>
+
+      <a href="./index.html" class="link">
+        <div class="admin">
+          <i class="fas fa-home"></i>
+        </div>
+      </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

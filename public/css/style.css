@@ -1,0 +1,89 @@
+body{
+  background-color: #f93;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0
+}
+.input{
+  border-radius: 5vh 0 0 5vh;
+  height: /*calc(var(--vh, 1vh) * 7)*/ 7vh;
+  width: 50vw;
+  padding: 0;
+  border: 0;
+  padding-left: 2vw
+}
+.logo{
+  width: 40%;
+  padding: 5%;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh
+  /* height: 80vh */
+}
+.search{
+    background-color: white;
+    box-shadow: none;
+    padding: 0;
+    height: 7vh;
+    border: 0;
+    border-radius: 0 5vh 5vh 0;
+    padding-right: 2vw;
+    cursor: pointer;
+}
+.link{
+  font-size: x-large;
+  align-self: start;
+  padding: 1%;
+  position: absolute;
+  right:0;
+  top: 0;
+}
+.link, .link *{
+  color: black;
+}
+.link:hover{
+  background-color: #b36d28;
+}
+#file{
+  display: none;
+}
+#file + label {
+    background-color: rgba(0,0,0,0);
+    display: inline-block;
+    border: black solid;
+    padding: 2vh;
+    margin: 5vh;
+}
+
+#file + .hover, .hover{
+  cursor: pointer;
+}
+
+#file + .hover:hover, .hover:hover {
+    background-color: #ce6600;
+}
+.tag__input{
+
+  display: block;
+  border-radius: 7vh;
+  height: /*calc(var(--vh, 1vh) * 7)*/ 7vh;
+  width: 50vw;
+  padding: 0;
+  border: 0;
+  padding-left: 2vw;
+}
+.upload__form{
+  text-align: center;
+  display: contents;
+}
+#err_msg{
+  font-size: x-small;
+  color: red;
+  font-family: unset;
+  display: block;
+}
