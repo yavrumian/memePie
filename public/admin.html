@@ -9,13 +9,17 @@
     <title>Admin - MemePie</title>
   </head>
   <body>
+    <p id="note">*Choose files to upload, add tags then hit <b>Add <i class="fas fa-arrow-right"></i></b> button <i class="far fa-times-circle hover note-close" ></i></p>
     <div class="main">
       <img class="logo" src="./img/cookie.png" alt="">
-      <form class="upload__form" action="index.html" method="get">
-        <input type="file" name="file" id="file">
-        <label for="file" class="hover">Choose a file <i class="fas fa-upload"></i> </label>
-        <span id="err_msg"></span>
-        <input class="tag__input" placeholder="Type tags..." type="text" name="tag">
+      <form class="upload__form" action="/fileupload" method="POST"  enctype="multipart/form-data" >
+          <input type="file" name="testFile" id="file" accept="image/*">
+          <label for="file" class="hover">Choose a file <i class="fas fa-upload"></i> </label>
+          <span id="err_msg"></span>
+          <div class="tag-input">
+            <input placeholder="Type tags..."class="input" type="text" name="query"><button class="search" type="submit"><b>Add <i class="fas fa-arrow-right"></i></b></button>
+            <p class="note">*Seperate with commas <i class="far fa-times-circle hover note-close" ></i></p>
+          </div>
       </form>
 
       <a href="./index.html" class="link">

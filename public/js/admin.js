@@ -12,28 +12,32 @@ $('#file').change(function(e){
   var file = this.files[0];
 
   if(file.size < 5000000 && file.type.match('image/')){
-    $('label').html(this.files[0].name + ' <i class="far fa-times-circle" id="close"></i>');
-    $('#err_msg').text('');
-    $('label').removeClass('hover')
-    $('#close').addClass('hover');
-    $("#file").prop('disabled', true);
-    $('#close').click(function(){
-      $('#file').val('');
-      $('label').html('Choose a file <i class="fas fa-upload"></i>');
-      $('label').addClass('hover')
-      setTimeout(function(){
-        $("#file").prop('disabled', false);
+      $('label').html(this.files[0].name + ' <i class="far fa-times-circle" id="close"></i>');
+      $('#err_msg').text('');
+      $('label').removeClass('hover')
+      $('#close').addClass('hover');
+      $("#file").prop('disabled', true);
+      $('#close').click(function(){
+        $('#file').val('');
+        $('label').html('Choose a file <i class="fas fa-upload"></i>');
+        $('label').addClass('hover')
+        setTimeout(function(){
+            $("#file").prop('disabled', false);
 
-      }, 1)
+        }, 1)
     })
   }else if(file.size > 5000000){
-    $('#err_msg').text('Image must be less than 5mb');
-    $(this).val('');
-    $('label').html('Choose a file <i class="fas fa-upload"></i>')
+      $('#err_msg').text('*Image must be less than 5mb');
+      $(this).val('');
+      $('label').html('Choose a file <i class="fas fa-upload"></i>')
 
   }else if(!file.type.match('image/')){
-    $('#err_msg').text('You can upload only image');
-    $('label').html('Choose a file <i class="fas fa-upload"></i>');
+      $('#err_msg').text('*You can upload only image');
+      $('label').html('Choose a file <i class="fas fa-upload"></i>');
 
   }
+})
+$('.note-close').click(function(){
+  $(this).parent().hide()
+  console.log('he');
 })
